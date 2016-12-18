@@ -465,8 +465,8 @@ public class TileAdapter extends RecyclerView.Adapter<Holder> implements TileSta
         }
     };
 
-        private class TileItemDecoration extends ItemDecoration {
-        private final ColorDrawable mDrawable;
+    private class TileItemDecoration extends ItemDecoration {
+        private ColorDrawable mDrawable = new ColorDrawable();
 
         private TileItemDecoration(Context context) {
             TypedArray ta =
@@ -475,8 +475,6 @@ public class TileAdapter extends RecyclerView.Adapter<Holder> implements TileSta
             ta.recycle();
         }
 
-    private final ItemDecoration mDecoration = new ItemDecoration() {
-        private final ColorDrawable mDrawable = new ColorDrawable();
 
         @Override
         public void onDraw(Canvas c, RecyclerView parent, State state) {
